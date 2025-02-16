@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class MainWindow
+Partial Class MainView
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,17 +25,17 @@ Partial Class MainWindow
         MenuStrip1 = New MenuStrip()
         EntradaToolStripMenuItem = New ToolStripMenuItem()
         DatosMenuItem = New ToolStripMenuItem()
-        SalidaToolStripMenuItem = New ToolStripMenuItem()
-        ReporteToolStripMenuItem = New ToolStripMenuItem()
-        SalirToolStripMenuItem = New ToolStripMenuItem()
         ListaToolStripMenuItem = New ToolStripMenuItem()
+        PrestamoToolStripMenuItem = New ToolStripMenuItem()
+        AdministrarToolStripMenuItem = New ToolStripMenuItem()
+        SalirToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' MenuStrip1
         ' 
         MenuStrip1.ImageScalingSize = New Size(28, 28)
-        MenuStrip1.Items.AddRange(New ToolStripItem() {EntradaToolStripMenuItem, SalidaToolStripMenuItem, SalirToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {EntradaToolStripMenuItem, PrestamoToolStripMenuItem, SalirToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(1343, 38)
@@ -55,18 +55,24 @@ Partial Class MainWindow
         DatosMenuItem.Size = New Size(315, 40)
         DatosMenuItem.Text = "Datos"
         ' 
-        ' SalidaToolStripMenuItem
+        ' ListaToolStripMenuItem
         ' 
-        SalidaToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ReporteToolStripMenuItem})
-        SalidaToolStripMenuItem.Name = "SalidaToolStripMenuItem"
-        SalidaToolStripMenuItem.Size = New Size(95, 34)
-        SalidaToolStripMenuItem.Text = "Cuotas"
+        ListaToolStripMenuItem.Name = "ListaToolStripMenuItem"
+        ListaToolStripMenuItem.Size = New Size(315, 40)
+        ListaToolStripMenuItem.Text = "Lista de clientes"
         ' 
-        ' ReporteToolStripMenuItem
+        ' PrestamoToolStripMenuItem
         ' 
-        ReporteToolStripMenuItem.Name = "ReporteToolStripMenuItem"
-        ReporteToolStripMenuItem.Size = New Size(238, 40)
-        ReporteToolStripMenuItem.Text = "Administrar"
+        PrestamoToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AdministrarToolStripMenuItem})
+        PrestamoToolStripMenuItem.Name = "PrestamoToolStripMenuItem"
+        PrestamoToolStripMenuItem.Size = New Size(127, 34)
+        PrestamoToolStripMenuItem.Text = "Prestamos"
+        ' 
+        ' AdministrarToolStripMenuItem
+        ' 
+        AdministrarToolStripMenuItem.Name = "AdministrarToolStripMenuItem"
+        AdministrarToolStripMenuItem.Size = New Size(315, 40)
+        AdministrarToolStripMenuItem.Text = "Administrar"
         ' 
         ' SalirToolStripMenuItem
         ' 
@@ -74,13 +80,7 @@ Partial Class MainWindow
         SalirToolStripMenuItem.Size = New Size(70, 34)
         SalirToolStripMenuItem.Text = "Salir"
         ' 
-        ' ListaToolStripMenuItem
-        ' 
-        ListaToolStripMenuItem.Name = "ListaToolStripMenuItem"
-        ListaToolStripMenuItem.Size = New Size(315, 40)
-        ListaToolStripMenuItem.Text = "Lista de clientes"
-        ' 
-        ' MainWindow
+        ' MainView
         ' 
         AutoScaleDimensions = New SizeF(12F, 30F)
         AutoScaleMode = AutoScaleMode.Font
@@ -88,7 +88,7 @@ Partial Class MainWindow
         Controls.Add(MenuStrip1)
         IsMdiContainer = True
         MainMenuStrip = MenuStrip1
-        Name = "MainWindow"
+        Name = "MainView"
         Text = "Casa financiera"
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
@@ -99,8 +99,8 @@ Partial Class MainWindow
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents EntradaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DatosMenuItem As ToolStripMenuItem
-    Friend WithEvents SalidaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReporteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PrestamoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AdministrarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListaToolStripMenuItem As ToolStripMenuItem
 

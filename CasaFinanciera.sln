@@ -9,6 +9,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CasaFinanciera.Application"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CasaFinanciera.Domain", "CasaFinanciera.Models\CasaFinanciera.Domain.vbproj", "{A42762DF-F266-4C9B-A33F-71D624E446FD}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CasaFinanciera.Interfaces", "CasaFinanciera.Interfaces\CasaFinanciera.Interfaces.vbproj", "{E5D49285-100C-4D9F-8993-EB5EC9F60265}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A42762DF-F266-4C9B-A33F-71D624E446FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A42762DF-F266-4C9B-A33F-71D624E446FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A42762DF-F266-4C9B-A33F-71D624E446FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D49285-100C-4D9F-8993-EB5EC9F60265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D49285-100C-4D9F-8993-EB5EC9F60265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D49285-100C-4D9F-8993-EB5EC9F60265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D49285-100C-4D9F-8993-EB5EC9F60265}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

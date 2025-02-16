@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CasaFinanciera.Interfaces\CasaFinanciera.Interfaces.vbproj" />
     <ProjectReference Include="..\CasaFinanciera.Models\CasaFinanciera.Domain.vbproj" />
     <ProjectReference Include="..\CasaFinanciera.Services\CasaFinanciera.Application.vbproj" />
   </ItemGroup>

@@ -1,11 +1,11 @@
-﻿Imports CasaFinanciera.Application
+﻿Imports CasaFinanciera.Interfaces
 
 Public Class Prestamo
     Implements IPrestamo
 
     Private Property _cliente As ICliente
     Private Property _monto As Decimal
-    Private Property _interesMensual As Decimal = 0.03D
+    Private Property _interesMensual As Decimal
     Private Property _plazoMeses As Integer
 
     Public Property Cliente As ICliente Implements IPrestamo.Cliente
@@ -46,7 +46,19 @@ Public Class Prestamo
 
     Public ReadOnly Property CuotaMensual As Decimal Implements IPrestamo.CuotaMensual
         Get
-            Return (Monto * (1 + InteresMensual)) / PlazoMeses
+            Return (Monto / PlazoMeses) * ((InteresMensual / 100) + 1)
+        End Get
+    End Property
+
+    Public ReadOnly Property Total As Decimal Implements IPrestamo.Total
+        Get
+            Return CuotaMensual * PlazoMeses
+        End Get
+    End Property
+
+    Public ReadOnly Property InteresTotal As Decimal Implements IPrestamo.InteresTotal
+        Get
+            Return Total - Monto
         End Get
     End Property
 End Class

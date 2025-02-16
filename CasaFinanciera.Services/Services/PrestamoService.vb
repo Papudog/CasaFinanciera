@@ -1,4 +1,5 @@
-﻿Public Class PrestamoService
+﻿Imports CasaFinanciera.Interfaces
+Public Class PrestamoService
     Implements IPrestamoService
 
     Private ReadOnly Property _prestamos As ICollection(Of IPrestamo) = New List(Of IPrestamo)
@@ -9,8 +10,8 @@
         End Get
     End Property
 
-    Public Function CalcularCuota(prestamo As IPrestamo) As Decimal Implements IPrestamoService.CalcularCuota
-
+    Public Function CalcularCuota(monto As Decimal, interesMensual As Decimal, plazoMeses As Integer) As Decimal Implements IPrestamoService.CalcularCuota
+        Return (monto / plazoMeses) * ((interesMensual / 100) + 1)
     End Function
 
     Public Event OnPrestamoAgregado As Action(Of IPrestamo) Implements IPrestamoService.OnPrestamoAgregado

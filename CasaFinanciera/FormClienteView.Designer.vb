@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class DatosCliente
+Partial Class FormClienteView
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,6 +22,7 @@ Partial Class DatosCliente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         TextNombre = New TextBox()
         Label1 = New Label()
         TextDireccion = New TextBox()
@@ -43,7 +44,9 @@ Partial Class DatosCliente
         ButtonGuardar = New Button()
         ComboCivil = New ComboBox()
         FontDialog1 = New FontDialog()
+        ErrorProvider1 = New ErrorProvider(components)
         CType(NumericSalario, ComponentModel.ISupportInitialize).BeginInit()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' TextNombre
@@ -52,7 +55,7 @@ Partial Class DatosCliente
         TextNombre.Location = New Point(45, 107)
         TextNombre.Name = "TextNombre"
         TextNombre.Size = New Size(200, 45)
-        TextNombre.TabIndex = 3
+        TextNombre.TabIndex = 1
         ' 
         ' Label1
         ' 
@@ -87,7 +90,7 @@ Partial Class DatosCliente
         TextTelefono.Location = New Point(313, 107)
         TextTelefono.Name = "TextTelefono"
         TextTelefono.Size = New Size(200, 45)
-        TextTelefono.TabIndex = 7
+        TextTelefono.TabIndex = 2
         ' 
         ' Label3
         ' 
@@ -104,7 +107,7 @@ Partial Class DatosCliente
         TextCorreo.Location = New Point(578, 107)
         TextCorreo.Name = "TextCorreo"
         TextCorreo.Size = New Size(315, 45)
-        TextCorreo.TabIndex = 9
+        TextCorreo.TabIndex = 3
         ' 
         ' Label4
         ' 
@@ -131,7 +134,7 @@ Partial Class DatosCliente
         NacimientoPicker.Location = New Point(45, 249)
         NacimientoPicker.Name = "NacimientoPicker"
         NacimientoPicker.Size = New Size(468, 45)
-        NacimientoPicker.TabIndex = 12
+        NacimientoPicker.TabIndex = 4
         ' 
         ' Label6
         ' 
@@ -148,7 +151,7 @@ Partial Class DatosCliente
         ComboDocumento.Location = New Point(45, 444)
         ComboDocumento.Name = "ComboDocumento"
         ComboDocumento.Size = New Size(212, 38)
-        ComboDocumento.TabIndex = 15
+        ComboDocumento.TabIndex = 6
         ' 
         ' Label7
         ' 
@@ -174,7 +177,7 @@ Partial Class DatosCliente
         CheckHistorial.Location = New Point(578, 437)
         CheckHistorial.Name = "CheckHistorial"
         CheckHistorial.Size = New Size(231, 34)
-        CheckHistorial.TabIndex = 19
+        CheckHistorial.TabIndex = 8
         CheckHistorial.Text = "Tiene deudas activas"
         CheckHistorial.UseVisualStyleBackColor = True
         ' 
@@ -194,7 +197,7 @@ Partial Class DatosCliente
         NumericSalario.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         NumericSalario.Name = "NumericSalario"
         NumericSalario.Size = New Size(210, 45)
-        NumericSalario.TabIndex = 21
+        NumericSalario.TabIndex = 9
         ' 
         ' ButtonGuardar
         ' 
@@ -202,7 +205,7 @@ Partial Class DatosCliente
         ButtonGuardar.Location = New Point(664, 602)
         ButtonGuardar.Name = "ButtonGuardar"
         ButtonGuardar.Size = New Size(229, 64)
-        ButtonGuardar.TabIndex = 22
+        ButtonGuardar.TabIndex = 10
         ButtonGuardar.Text = "Guardar cliente"
         ButtonGuardar.UseVisualStyleBackColor = True
         ' 
@@ -212,7 +215,11 @@ Partial Class DatosCliente
         ComboCivil.Location = New Point(325, 444)
         ComboCivil.Name = "ComboCivil"
         ComboCivil.Size = New Size(212, 38)
-        ComboCivil.TabIndex = 23
+        ComboCivil.TabIndex = 7
+        ' 
+        ' ErrorProvider1
+        ' 
+        ErrorProvider1.ContainerControl = Me
         ' 
         ' DatosCliente
         ' 
@@ -241,6 +248,7 @@ Partial Class DatosCliente
         Name = "DatosCliente"
         Text = "Datos del cliente"
         CType(NumericSalario, ComponentModel.ISupportInitialize).EndInit()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -266,4 +274,5 @@ Partial Class DatosCliente
     Friend WithEvents ButtonGuardar As Button
     Friend WithEvents ComboCivil As ComboBox
     Friend WithEvents FontDialog1 As FontDialog
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

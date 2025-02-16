@@ -4,4 +4,6 @@
     Property InteresMensual As Decimal
     Property PlazoMeses As Integer
     ReadOnly Property CuotaMensual As Decimal
+    ReadOnly Property Total As Decimal
+    ReadOnly Property InteresTotal As Decimal
 End Interface

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class PrestamoCliente
+Partial Class FormPrestamoView
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,6 +22,7 @@ Partial Class PrestamoCliente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
@@ -40,8 +41,10 @@ Partial Class PrestamoCliente
         Label9 = New Label()
         NumericPrestamo = New NumericUpDown()
         NumericPlazo = New NumericUpDown()
+        ErrorProvider1 = New ErrorProvider(components)
         CType(NumericPrestamo, ComponentModel.ISupportInitialize).BeginInit()
         CType(NumericPlazo, ComponentModel.ISupportInitialize).BeginInit()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -82,6 +85,7 @@ Partial Class PrestamoCliente
         ' 
         ' TextCliente
         ' 
+        TextCliente.Enabled = False
         TextCliente.Font = New Font("Segoe UI", 12F)
         TextCliente.Location = New Point(43, 102)
         TextCliente.Name = "TextCliente"
@@ -205,7 +209,11 @@ Partial Class PrestamoCliente
         NumericPlazo.Size = New Size(210, 45)
         NumericPlazo.TabIndex = 20
         ' 
-        ' PrestamoCliente
+        ' ErrorProvider1
+        ' 
+        ErrorProvider1.ContainerControl = Me
+        ' 
+        ' FormPrestamoView
         ' 
         AutoScaleDimensions = New SizeF(12F, 30F)
         AutoScaleMode = AutoScaleMode.Font
@@ -228,10 +236,11 @@ Partial Class PrestamoCliente
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Name = "PrestamoCliente"
+        Name = "FormPrestamoView"
         Text = "PrestamoCliente"
         CType(NumericPrestamo, ComponentModel.ISupportInitialize).EndInit()
         CType(NumericPlazo, ComponentModel.ISupportInitialize).EndInit()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -254,4 +263,5 @@ Partial Class PrestamoCliente
     Friend WithEvents Label9 As Label
     Friend WithEvents NumericPrestamo As NumericUpDown
     Friend WithEvents NumericPlazo As NumericUpDown
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

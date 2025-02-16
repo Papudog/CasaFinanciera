@@ -1,12 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <RootNamespace>CasaFinanciera.Models</RootNamespace>
+    <RootNamespace>CasaFinanciera.Domain</RootNamespace>
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\CasaFinanciera.Services\CasaFinanciera.Application.vbproj" />
+    <ProjectReference Include="..\CasaFinanciera.Interfaces\CasaFinanciera.Interfaces.vbproj" />
   </ItemGroup>
-
 </Project>

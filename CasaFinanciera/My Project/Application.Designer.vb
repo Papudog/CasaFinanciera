@@ -33,7 +33,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.CasaFinanciera.UI.MainWindow
+            Me.MainForm = Global.CasaFinanciera.UI.MainView
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

@@ -1,4 +1,4 @@
-﻿Imports CasaFinanciera.Application
+﻿Imports CasaFinanciera.Interfaces
 
 Public Class Cliente
     Implements ICliente

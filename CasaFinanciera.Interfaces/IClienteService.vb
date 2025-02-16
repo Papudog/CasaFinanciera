@@ -1,6 +1,7 @@
 ﻿Public Interface IClienteService
-    Property Clientes As ICollection(Of ICliente)
+    ReadOnly Property Clientes As List(Of ICliente)
     Function ObtenerCliente(cliente As ICliente) As ICliente
     Sub AgregarCliente(cliente As ICliente)
-    Event OnClienteAgregado As Action(Of ICliente)
+    Sub EditarCliente(cliente As ICliente)
+    Event OnClienteChanged As Action(Of ICliente)
 End Interface
