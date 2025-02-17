@@ -29,6 +29,7 @@ Partial Class MainView
         PrestamoToolStripMenuItem = New ToolStripMenuItem()
         AdministrarToolStripMenuItem = New ToolStripMenuItem()
         SalirToolStripMenuItem = New ToolStripMenuItem()
+        LiquidacionesToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -63,7 +64,7 @@ Partial Class MainView
         ' 
         ' PrestamoToolStripMenuItem
         ' 
-        PrestamoToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AdministrarToolStripMenuItem})
+        PrestamoToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AdministrarToolStripMenuItem, LiquidacionesToolStripMenuItem})
         PrestamoToolStripMenuItem.Name = "PrestamoToolStripMenuItem"
         PrestamoToolStripMenuItem.Size = New Size(127, 34)
         PrestamoToolStripMenuItem.Text = "Prestamos"
@@ -79,6 +80,12 @@ Partial Class MainView
         SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         SalirToolStripMenuItem.Size = New Size(70, 34)
         SalirToolStripMenuItem.Text = "Salir"
+        ' 
+        ' LiquidacionesToolStripMenuItem
+        ' 
+        LiquidacionesToolStripMenuItem.Name = "LiquidacionesToolStripMenuItem"
+        LiquidacionesToolStripMenuItem.Size = New Size(315, 40)
+        LiquidacionesToolStripMenuItem.Text = "Liquidaciones"
         ' 
         ' MainView
         ' 
@@ -103,5 +110,6 @@ Partial Class MainView
     Friend WithEvents AdministrarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LiquidacionesToolStripMenuItem As ToolStripMenuItem
 
 End Class

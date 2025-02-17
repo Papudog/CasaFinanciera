@@ -1,5 +1,4 @@
-﻿Imports CasaFinanciera.Application
-Imports CasaFinanciera.Domain
+﻿Imports CasaFinanciera.Domain
 Imports CasaFinanciera.Interfaces
 
 Public Class FormPrestamoView
@@ -55,7 +54,8 @@ Public Class FormPrestamoView
             .Cliente = _cliente,
             .InteresMensual = 3,
             .Monto = monto,
-            .PlazoMeses = plazoMeses
+            .PlazoMeses = plazoMeses,
+            .EstaPagada = False
         }
     End Sub
 
@@ -64,7 +64,7 @@ Public Class FormPrestamoView
 
         _cliente.HistorialCrediticio = True
         _prestamoService.AgregarPrestamo(_prestamo)
-        MessageBox.Show("Cuota mensual: " & _prestamo.CuotaMensual & vbCrLf & "Total: " & _prestamo.Total & vbCrLf & "Interés total: " & _prestamo.InteresTotal)
+        MessageBox.Show("Préstamo guardado con éxito.", "Préstamo", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Me.Close()
     End Sub
 

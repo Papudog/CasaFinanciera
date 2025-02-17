@@ -28,9 +28,16 @@ Public Class MainView
     End Sub
 
     Private Sub AdministrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarToolStripMenuItem.Click
-        Dim vistaPrestamos As New PrestamosView(_prestamoService) With {
+        Dim vistaPrestamos As New PrestamosView(_prestamoService, _clienteService) With {
            .MdiParent = Me
         }
         vistaPrestamos.Show()
+    End Sub
+
+    Private Sub LiquidacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LiquidacionesToolStripMenuItem.Click
+        Dim liquidacionesView As New LiquidacionesView(_prestamoService) With {
+            .MdiParent = Me
+        }
+        liquidacionesView.Show()
     End Sub
 End Class

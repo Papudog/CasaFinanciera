@@ -1,26 +1,26 @@
 ﻿Imports CasaFinanciera.Interfaces
 
-Public Class PrestamosView
+Public Class LiquidacionesView
     Private ReadOnly Property _prestamoService As IPrestamoService
-
     Sub New(prestamoService As IPrestamoService)
         InitializeComponent()
 
         _prestamoService = prestamoService
-        AddHandler prestamoService.OnPrestamoChanged, AddressOf OnPrestamoAgregado
+
+        AddHandler prestamoService.OnPrestamoChanged, AddressOf OnPrestamoChanged
     End Sub
 
-    Private Sub OnPrestamoAgregado(prestamo As IPrestamo)
+    Private Sub OnPrestamoChanged(prestamo As IPrestamo)
         PopulateGrid()
     End Sub
 
     Private Sub PopulateGrid()
-        PrestamosGrid.DataSource = Nothing
-        PrestamosGrid.DataSource = _prestamoService.Prestamos
+        DataGridLiquidaciones.DataSource = Nothing
+        DataGridLiquidaciones.DataSource = _prestamoService.ObtenerPrestamosPor("Pagados")
     End Sub
 
-    Private Sub PrestamosView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        With PrestamosGrid
+    Private Sub LiquidacionesView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        With DataGridLiquidaciones
             .AutoGenerateColumns = False
             .Columns.Add(New DataGridViewTextBoxColumn With {
                 .DataPropertyName = "NombreCliente",
@@ -50,7 +50,7 @@ Public Class PrestamosView
                 .DataPropertyName = "InteresTotal",
                 .HeaderText = "Interés Total"
             })
-            PrestamosGrid.DataSource = _prestamoService.Prestamos
+            DataGridLiquidaciones.DataSource = _prestamoService.ObtenerPrestamosPor("Pagados")
         End With
     End Sub
 End Class

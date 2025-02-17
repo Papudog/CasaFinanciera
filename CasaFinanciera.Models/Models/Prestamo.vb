@@ -7,6 +7,7 @@ Public Class Prestamo
     Private Property _monto As Decimal
     Private Property _interesMensual As Decimal
     Private Property _plazoMeses As Integer
+    Private Property _estaPagada As Boolean = False
 
     Public Property Cliente As ICliente Implements IPrestamo.Cliente
         Get
@@ -66,5 +67,14 @@ Public Class Prestamo
         Get
             Return Cliente.Nombre
         End Get
+    End Property
+
+    Public Property EstaPagada As Boolean Implements IPrestamo.EstaPagada
+        Get
+            Return _estaPagada
+        End Get
+        Set(value As Boolean)
+            _estaPagada = value
+        End Set
     End Property
 End Class
