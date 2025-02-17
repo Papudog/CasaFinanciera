@@ -97,13 +97,13 @@ Public Class FormPrestamoView
             Return False
         End If
 
-        If NumericPlazo.Value <= 0 Then
-            ErrorProvider1.SetError(NumericPlazo, _errorDictionary("negativo"))
+        If Not _plazosMeses.Contains(NumericPlazo.Value.ToString()) Then
+            ErrorProvider1.SetError(NumericPlazo, _errorDictionary("plazoContains"))
             Return False
         End If
 
-        If Not _plazosMeses.Contains(NumericPlazo.Value.ToString()) Then
-            ErrorProvider1.SetError(NumericPlazo, _errorDictionary("plazoContains"))
+        If NumericPlazo.Value <= 0 Then
+            ErrorProvider1.SetError(NumericPlazo, _errorDictionary("negativo"))
             Return False
         End If
 
