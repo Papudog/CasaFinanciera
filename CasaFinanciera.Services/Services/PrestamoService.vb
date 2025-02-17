@@ -14,9 +14,10 @@ Public Class PrestamoService
         Return (monto / plazoMeses) * ((interesMensual / 100) + 1)
     End Function
 
-    Public Event OnPrestamoAgregado As Action(Of IPrestamo) Implements IPrestamoService.OnPrestamoAgregado
+    Public Event OnPrestamoChanged As Action(Of IPrestamo) Implements IPrestamoService.OnPrestamoChanged
 
     Public Sub AgregarPrestamo(prestamo As IPrestamo) Implements IPrestamoService.AgregarPrestamo
         _prestamos.Add(prestamo)
+        RaiseEvent OnPrestamoChanged(prestamo)
     End Sub
 End Class

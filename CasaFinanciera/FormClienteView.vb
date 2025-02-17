@@ -60,9 +60,7 @@ Public Class FormClienteView
 
 
     Private Function isEmail(email As String) As Boolean
-        Dim regex As Regex = New Regex("^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")
-
-        Return regex.IsMatch(email)
+        Return New Regex("^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").IsMatch(email)
     End Function
 
 

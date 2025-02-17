@@ -2,9 +2,8 @@
 
 Public Class MainView
 
-    Private Property _clienteService As New ClienteService
-    Private Property _prestamoService As New PrestamoService
-
+    Private ReadOnly Property _clienteService As New ClienteService
+    Private ReadOnly Property _prestamoService As New PrestamoService
 
     Private Sub MainWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadListaClientes()
@@ -22,7 +21,7 @@ Public Class MainView
     End Sub
 
     Private Sub LoadListaClientes()
-        Dim lista As New ClientesView(_clienteService) With {
+        Dim lista As New ClientesView(_clienteService, _prestamoService) With {
             .MdiParent = Me
         }
         lista.Show()
@@ -30,7 +29,8 @@ Public Class MainView
 
     Private Sub AdministrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarToolStripMenuItem.Click
         Dim vistaPrestamos As New PrestamosView(_prestamoService) With {
-            .MdiParent = Me
+           .MdiParent = Me
         }
+        vistaPrestamos.Show()
     End Sub
 End Class

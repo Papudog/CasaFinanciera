@@ -46,19 +46,25 @@ Public Class Prestamo
 
     Public ReadOnly Property CuotaMensual As Decimal Implements IPrestamo.CuotaMensual
         Get
-            Return (Monto / PlazoMeses) * ((InteresMensual / 100) + 1)
+            Return Math.Round((Monto / PlazoMeses) * ((InteresMensual / 100) + 1), 2)
         End Get
     End Property
 
     Public ReadOnly Property Total As Decimal Implements IPrestamo.Total
         Get
-            Return CuotaMensual * PlazoMeses
+            Return Math.Round(CuotaMensual * PlazoMeses)
         End Get
     End Property
 
     Public ReadOnly Property InteresTotal As Decimal Implements IPrestamo.InteresTotal
         Get
-            Return Total - Monto
+            Return Math.Round(Total - Monto)
+        End Get
+    End Property
+
+    Public ReadOnly Property NombreCliente As String Implements IPrestamo.NombreCliente
+        Get
+            Return Cliente.Nombre
         End Get
     End Property
 End Class

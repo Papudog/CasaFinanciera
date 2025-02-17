@@ -52,13 +52,13 @@ Partial Class MainView
         ' DatosMenuItem
         ' 
         DatosMenuItem.Name = "DatosMenuItem"
-        DatosMenuItem.Size = New Size(315, 40)
+        DatosMenuItem.Size = New Size(278, 40)
         DatosMenuItem.Text = "Datos"
         ' 
         ' ListaToolStripMenuItem
         ' 
         ListaToolStripMenuItem.Name = "ListaToolStripMenuItem"
-        ListaToolStripMenuItem.Size = New Size(315, 40)
+        ListaToolStripMenuItem.Size = New Size(278, 40)
         ListaToolStripMenuItem.Text = "Lista de clientes"
         ' 
         ' PrestamoToolStripMenuItem

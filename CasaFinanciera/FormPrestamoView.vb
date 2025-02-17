@@ -26,11 +26,15 @@ Public Class FormPrestamoView
 
     Private Sub PrestamoCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'ComboPrestamo.Items.AddRange(_plazosMeses)
-        NumericPrestamo.Maximum = 1000000
         NumericPlazo.Maximum = 24
 
         LabelMonto.Text = _cliente.Prestamo.ToString()
         TextCliente.Text = _cliente.Nombre
+        NumericSalario.Value = _cliente.Salario
+        TextCivil.Text = _cliente.EstadoCivil
+        CheckDeuda.Checked = _cliente.HistorialCrediticio
+
+        If CheckDeuda.Checked Then ButtonGuardar.Enabled = False
     End Sub
 
     Private Sub ButtonCalcular_Click(sender As Object, e As EventArgs) Handles ButtonCalcular.Click
@@ -53,7 +57,6 @@ Public Class FormPrestamoView
             .Monto = monto,
             .PlazoMeses = plazoMeses
         }
-
     End Sub
 
     Private Sub ButtonGuardar_Click(sender As Object, e As EventArgs) Handles ButtonGuardar.Click
@@ -108,6 +111,6 @@ Public Class FormPrestamoView
     End Function
 
     Public Sub LimpiarCampos() Implements IForm.LimpiarCampos
-
+        'Throw New NotImplementedException()
     End Sub
 End Class

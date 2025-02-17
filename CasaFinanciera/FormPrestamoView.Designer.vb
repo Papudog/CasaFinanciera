@@ -28,7 +28,6 @@ Partial Class FormPrestamoView
         Label3 = New Label()
         Label4 = New Label()
         TextCliente = New TextBox()
-        Label5 = New Label()
         Label6 = New Label()
         LabelCuota = New Label()
         LabelTotal = New Label()
@@ -42,33 +41,42 @@ Partial Class FormPrestamoView
         NumericPrestamo = New NumericUpDown()
         NumericPlazo = New NumericUpDown()
         ErrorProvider1 = New ErrorProvider(components)
+        GroupBox1 = New GroupBox()
+        TextCivil = New TextBox()
+        Label11 = New Label()
+        CheckDeuda = New CheckBox()
+        Label7 = New Label()
+        NumericSalario = New NumericUpDown()
+        Label5 = New Label()
         CType(NumericPrestamo, ComponentModel.ISupportInitialize).BeginInit()
         CType(NumericPlazo, ComponentModel.ISupportInitialize).BeginInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
+        GroupBox1.SuspendLayout()
+        CType(NumericSalario, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(288, 47)
+        Label1.Location = New Point(378, 51)
         Label1.Name = "Label1"
-        Label1.Size = New Size(202, 30)
+        Label1.Size = New Size(100, 30)
         Label1.TabIndex = 0
-        Label1.Text = "Monto del préstamo"
+        Label1.Text = "Préstamo"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(43, 205)
+        Label2.Location = New Point(378, 245)
         Label2.Name = "Label2"
         Label2.Size = New Size(165, 30)
         Label2.TabIndex = 2
-        Label2.Text = "Interes mensual:"
+        Label2.Text = "Interés mensual:"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(239, 205)
+        Label3.Location = New Point(574, 245)
         Label3.Name = "Label3"
         Label3.Size = New Size(41, 30)
         Label3.TabIndex = 3
@@ -77,7 +85,7 @@ Partial Class FormPrestamoView
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(547, 47)
+        Label4.Location = New Point(378, 110)
         Label4.Name = "Label4"
         Label4.Size = New Size(63, 30)
         Label4.TabIndex = 4
@@ -86,25 +94,16 @@ Partial Class FormPrestamoView
         ' TextCliente
         ' 
         TextCliente.Enabled = False
-        TextCliente.Font = New Font("Segoe UI", 12F)
-        TextCliente.Location = New Point(43, 102)
+        TextCliente.Font = New Font("Segoe UI", 9F)
+        TextCliente.Location = New Point(6, 37)
         TextCliente.Name = "TextCliente"
-        TextCliente.Size = New Size(202, 45)
+        TextCliente.Size = New Size(336, 35)
         TextCliente.TabIndex = 7
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(43, 47)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(77, 30)
-        Label5.TabIndex = 6
-        Label5.Text = "Cliente"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(43, 273)
+        Label6.Location = New Point(378, 290)
         Label6.Name = "Label6"
         Label6.Size = New Size(157, 30)
         Label6.TabIndex = 8
@@ -113,7 +112,7 @@ Partial Class FormPrestamoView
         ' LabelCuota
         ' 
         LabelCuota.AutoSize = True
-        LabelCuota.Location = New Point(247, 273)
+        LabelCuota.Location = New Point(582, 290)
         LabelCuota.Name = "LabelCuota"
         LabelCuota.Size = New Size(24, 30)
         LabelCuota.TabIndex = 9
@@ -122,7 +121,7 @@ Partial Class FormPrestamoView
         ' LabelTotal
         ' 
         LabelTotal.AutoSize = True
-        LabelTotal.Location = New Point(247, 337)
+        LabelTotal.Location = New Point(582, 334)
         LabelTotal.Name = "LabelTotal"
         LabelTotal.Size = New Size(24, 30)
         LabelTotal.TabIndex = 11
@@ -131,7 +130,7 @@ Partial Class FormPrestamoView
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(43, 337)
+        Label8.Location = New Point(378, 334)
         Label8.Name = "Label8"
         Label8.Size = New Size(138, 30)
         Label8.TabIndex = 10
@@ -140,7 +139,7 @@ Partial Class FormPrestamoView
         ' LabelInteres
         ' 
         LabelInteres.AutoSize = True
-        LabelInteres.Location = New Point(247, 394)
+        LabelInteres.Location = New Point(582, 379)
         LabelInteres.Name = "LabelInteres"
         LabelInteres.Size = New Size(24, 30)
         LabelInteres.TabIndex = 13
@@ -149,7 +148,7 @@ Partial Class FormPrestamoView
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Location = New Point(43, 394)
+        Label10.Location = New Point(378, 379)
         Label10.Name = "Label10"
         Label10.Size = New Size(129, 30)
         Label10.TabIndex = 12
@@ -157,28 +156,29 @@ Partial Class FormPrestamoView
         ' 
         ' ButtonCalcular
         ' 
-        ButtonCalcular.Font = New Font("Segoe UI", 12F)
-        ButtonCalcular.Location = New Point(485, 295)
+        ButtonCalcular.Font = New Font("Segoe UI", 9F)
+        ButtonCalcular.Location = New Point(378, 173)
         ButtonCalcular.Name = "ButtonCalcular"
-        ButtonCalcular.Size = New Size(272, 54)
+        ButtonCalcular.Size = New Size(202, 45)
         ButtonCalcular.TabIndex = 14
-        ButtonCalcular.Text = "Calcular prestamo"
+        ButtonCalcular.Text = "Calcular préstamo"
         ButtonCalcular.UseVisualStyleBackColor = True
         ' 
         ' ButtonGuardar
         ' 
-        ButtonGuardar.Font = New Font("Segoe UI", 12F)
-        ButtonGuardar.Location = New Point(485, 370)
+        ButtonGuardar.Font = New Font("Segoe UI", 9F)
+        ButtonGuardar.Location = New Point(378, 435)
         ButtonGuardar.Name = "ButtonGuardar"
-        ButtonGuardar.Size = New Size(272, 54)
+        ButtonGuardar.Size = New Size(202, 45)
         ButtonGuardar.TabIndex = 15
-        ButtonGuardar.Text = "Guardar prestamo"
+        ButtonGuardar.Text = "Guardar préstamo"
         ButtonGuardar.UseVisualStyleBackColor = True
         ' 
         ' LabelMonto
         ' 
         LabelMonto.AutoSize = True
-        LabelMonto.Location = New Point(689, 243)
+        LabelMonto.Font = New Font("Segoe UI", 9F, FontStyle.Italic)
+        LabelMonto.Location = New Point(211, 168)
         LabelMonto.Name = "LabelMonto"
         LabelMonto.Size = New Size(24, 30)
         LabelMonto.TabIndex = 18
@@ -187,41 +187,116 @@ Partial Class FormPrestamoView
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(485, 243)
+        Label9.Font = New Font("Segoe UI", 9F, FontStyle.Italic)
+        Label9.Location = New Point(7, 168)
         Label9.Name = "Label9"
-        Label9.Size = New Size(160, 30)
+        Label9.Size = New Size(155, 30)
         Label9.TabIndex = 17
         Label9.Text = "Monto máximo:"
         ' 
         ' NumericPrestamo
         ' 
-        NumericPrestamo.Font = New Font("Segoe UI", 12F)
-        NumericPrestamo.Location = New Point(288, 102)
+        NumericPrestamo.Font = New Font("Segoe UI", 9F)
+        NumericPrestamo.Location = New Point(484, 49)
+        NumericPrestamo.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
         NumericPrestamo.Name = "NumericPrestamo"
-        NumericPrestamo.Size = New Size(210, 45)
+        NumericPrestamo.Size = New Size(287, 35)
         NumericPrestamo.TabIndex = 19
         ' 
         ' NumericPlazo
         ' 
-        NumericPlazo.Font = New Font("Segoe UI", 12F)
-        NumericPlazo.Location = New Point(547, 102)
+        NumericPlazo.Font = New Font("Segoe UI", 9F)
+        NumericPlazo.Location = New Point(484, 108)
         NumericPlazo.Name = "NumericPlazo"
-        NumericPlazo.Size = New Size(210, 45)
+        NumericPlazo.Size = New Size(287, 35)
         NumericPlazo.TabIndex = 20
         ' 
         ' ErrorProvider1
         ' 
         ErrorProvider1.ContainerControl = Me
         ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(TextCivil)
+        GroupBox1.Controls.Add(Label11)
+        GroupBox1.Controls.Add(CheckDeuda)
+        GroupBox1.Controls.Add(Label7)
+        GroupBox1.Controls.Add(NumericSalario)
+        GroupBox1.Controls.Add(Label5)
+        GroupBox1.Controls.Add(TextCliente)
+        GroupBox1.Controls.Add(Label9)
+        GroupBox1.Controls.Add(LabelMonto)
+        GroupBox1.Location = New Point(6, 12)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(350, 468)
+        GroupBox1.TabIndex = 21
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Cliente"
+        ' 
+        ' TextCivil
+        ' 
+        TextCivil.Enabled = False
+        TextCivil.Font = New Font("Segoe UI", 9F)
+        TextCivil.Location = New Point(6, 309)
+        TextCivil.Name = "TextCivil"
+        TextCivil.Size = New Size(336, 35)
+        TextCivil.TabIndex = 26
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Location = New Point(7, 276)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(116, 30)
+        Label11.TabIndex = 25
+        Label11.Text = "Estado civil"
+        ' 
+        ' CheckDeuda
+        ' 
+        CheckDeuda.AutoSize = True
+        CheckDeuda.Enabled = False
+        CheckDeuda.Location = New Point(162, 225)
+        CheckDeuda.Name = "CheckDeuda"
+        CheckDeuda.Size = New Size(22, 21)
+        CheckDeuda.TabIndex = 24
+        CheckDeuda.UseVisualStyleBackColor = True
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(6, 220)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(149, 30)
+        Label7.TabIndex = 23
+        Label7.Text = "¿Posee deuda?"
+        ' 
+        ' NumericSalario
+        ' 
+        NumericSalario.Enabled = False
+        NumericSalario.Font = New Font("Segoe UI", 9F)
+        NumericSalario.Location = New Point(6, 117)
+        NumericSalario.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
+        NumericSalario.Name = "NumericSalario"
+        NumericSalario.Size = New Size(336, 35)
+        NumericSalario.TabIndex = 22
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(6, 84)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(159, 30)
+        Label5.TabIndex = 22
+        Label5.Text = "Salario mensual"
+        ' 
         ' FormPrestamoView
         ' 
         AutoScaleDimensions = New SizeF(12F, 30F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 534)
+        ClientSize = New Size(800, 502)
+        Controls.Add(GroupBox1)
         Controls.Add(NumericPlazo)
         Controls.Add(NumericPrestamo)
-        Controls.Add(LabelMonto)
-        Controls.Add(Label9)
         Controls.Add(ButtonGuardar)
         Controls.Add(ButtonCalcular)
         Controls.Add(LabelInteres)
@@ -230,17 +305,18 @@ Partial Class FormPrestamoView
         Controls.Add(Label8)
         Controls.Add(LabelCuota)
         Controls.Add(Label6)
-        Controls.Add(TextCliente)
-        Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Name = "FormPrestamoView"
-        Text = "PrestamoCliente"
+        Text = "Préstamo para un cliente"
         CType(NumericPrestamo, ComponentModel.ISupportInitialize).EndInit()
         CType(NumericPlazo, ComponentModel.ISupportInitialize).EndInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
+        CType(NumericSalario, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -250,7 +326,6 @@ Partial Class FormPrestamoView
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents TextCliente As TextBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents LabelCuota As Label
     Friend WithEvents LabelTotal As Label
@@ -264,4 +339,11 @@ Partial Class FormPrestamoView
     Friend WithEvents NumericPrestamo As NumericUpDown
     Friend WithEvents NumericPlazo As NumericUpDown
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents Label5 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents NumericSalario As NumericUpDown
+    Friend WithEvents Label7 As Label
+    Friend WithEvents CheckDeuda As CheckBox
+    Friend WithEvents TextCivil As TextBox
+    Friend WithEvents Label11 As Label
 End Class
